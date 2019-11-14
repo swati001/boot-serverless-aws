@@ -38,7 +38,7 @@ public class ApiControllerTest {
 
     @Test 
     public void testGreetingApi() throws JsonParseException, JsonMappingException, IOException {
-       AwsProxyRequest request = new AwsProxyRequestBuilder("/api", "GET").build(); 
+       AwsProxyRequest request = new AwsProxyRequestBuilder("/api/v1/users", "GET").build(); 
        AwsProxyResponse response = handler.proxy(request, lambdaContext);
       
        Assert.assertEquals(response.getStatusCode(), 200); 
