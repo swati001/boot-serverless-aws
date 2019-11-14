@@ -1,17 +1,12 @@
 package com.boot.serverless.api.controller;
 
-import static org.junit.Assert.assertThat;
-
 import java.io.IOException;
 
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.junit.runners.JUnit4;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.json.JsonParseException;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.test.context.web.WebAppConfiguration;
@@ -26,7 +21,7 @@ import com.boot.serverless.api.handler.StreamDataHandler;
 import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-@RunWith(JUnit4.class)
+@RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(classes = { ApiApplication.class })
 @WebAppConfiguration
 public class ApiControllerTest {
